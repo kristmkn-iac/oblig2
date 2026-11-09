@@ -6,6 +6,6 @@
 # oblig2/ i containeren, så den blander seg ikke med oblig 1.
 
 resource_group_name  = "rg-tfstate-kristmkn"
-storage_account_name = "sttfkristmkn"
+storage_account_name = "sttfkristmknhukoqv"
 container_name       = "tfstate"
 use_azuread_auth     = true
