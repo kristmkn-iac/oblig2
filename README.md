@@ -157,3 +157,5 @@ faglærer.
 | `No available instances to satisfy this request` | App Service har midlertidig for lite kapasitet i regionen. Kjør på nytt litt senere |
 | Web app-en svarer ikke, eller tidsavbrudd i nettleseren | Første forespørsel etter en utrulling starter appen, og det kan ta 2–3 minutter. Last siden på nytt |
 | `config/dev/<x>.tfvars passer ikke i noe lag` | Fila peker på en stack som ikke finnes, eller som ikke står i `LAG` i `kjor.sh` |
+
+Migrert til vertikal inndeling: shared-network og én service-stack per tjeneste.
