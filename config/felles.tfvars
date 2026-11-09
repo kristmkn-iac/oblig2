@@ -7,4 +7,4 @@ kortnavn = "kristmkn"
 
 # App Service (web app) virker bare i West Europe i abonnementet dere bruker.
 # Ikke bytt region.
-location = "norwayeast"
+location = "westeurope"

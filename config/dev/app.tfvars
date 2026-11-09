@@ -3,6 +3,8 @@ tjenester = {
   meny  = "webapp"
 }
 
+webapp_sku = "P0v3"
+
 # En offentlig nøkkel uten tilhørende privat nøkkel: ingen kan logge inn på
 # VM-en, og det trenger du heller ikke. Vil du logge inn, bytt den ut med
 # innholdet i din egen .pub-fil. Den PRIVATE nøkkelen skal aldri i repoet.
