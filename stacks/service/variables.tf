@@ -81,3 +81,13 @@ variable "webapp_sku" {
   type        = string
   default     = "B1"
 }
+
+variable "ekstra_innkommende" {
+  description = "Ekstra innkommende regler på tjenestens NSG, i tillegg til HTTP."
+  type = map(object({
+    port      = string
+    kilde     = string
+    prioritet = number
+  }))
+  default = {}
+}
