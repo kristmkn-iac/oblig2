@@ -84,3 +84,21 @@ module "webapp" {
   sku                 = var.webapp_sku
   tags                = local.tags
 }
+
+resource "azurerm_network_security_rule" "ekstra" {
+  for_each = var.ekstra_innkommende
+
+  name                        = each.key
+  priority                    = each.value.prioritet
+  direction                   = "Inbound"
+  access                      = "Allow"
+  protocol                    = "Tcp"
+  source_port_range           = "*"
+  destination_port_range      = each.value.port
+  source_address_prefix       = each.value.kilde
+  destination_address_prefix  = "*"
+  resource_group_name         = local.nett.resource_group_name
+  network_security_group_name = "nsg-${var.tjeneste}"
+
+  depends_on = [module.subnet]
+}
